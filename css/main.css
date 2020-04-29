@@ -57,3 +57,16 @@ img.blur {
   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
 
 }
+
+.siteReviews{
+ font-weight: bold;
+}
+
+#reviewsHeader{
+  margin: 0 auto;
+  color: #007bff;
+  padding-bottom: 60px;
+}
+.media-heading + P{
+  font-weight: bold;
+}

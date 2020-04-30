@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <script src="js/login.js"></script>
+  <script src="js/register.js"></script>
 
   <title>Book Review</title>
 
@@ -38,6 +40,14 @@
           <li class="nav-item">
               <a class="navbar-brand" href="about.html"> About</a>
           </li>
+          <li class="nav-item">
+            <a type="button" data-toggle="modal" data-target="#loginModal" class="navbar-brand" href="#"> Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a type="button" data-toggle="modal" data-target="#registerModal" class="navbar-brand" href="#"> Register</a>
+          </li>
+
           <li class="nav-item active">
               <a class="navbar-brand" href="allposts.html">
                   <button class="btn btn-primary" type="button">All Posts</button>
@@ -48,6 +58,56 @@
     </div>
   </nav>
   <!-- Page Content -->
+  <!--Login Modal-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="modal fade" id="loginModal">
+          <div class="modal-dialog modal-dialog-center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Login</h3>
+              </div>
+              <div class="modal-body">
+                <label>Username</label><input type="text" class="form-control"/>
+                <label>Password</label><input type="password" class="form-control"/>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="login()">Login</button><br>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--Register Modal-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="modal fade" id="registerModal">
+          <div class="modal-dialog modal-dialog-center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Register</h3>
+              </div>
+              <div class="modal-body">
+                <label>Username</label><input type="text" class="form-control"/>
+                <label>Password</label><input type="password" class="form-control"/>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary"  onclick="register()">Register</button><br>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!--                                          JUMBOTRON                                         -->
   <!-- ****************************************************************************************** -->
@@ -379,7 +439,7 @@
   <!-- /. site Reviews-->
   <div id="siteReviews" class="container">
     <div class="text-center">
-      <h3 id="reviewsHeader" type="button" data-toggle="collapse" data-target="#collapseOne"
+      <h3 class="btn-block" id="reviewsHeader" type="button" data-toggle="collapse" data-target="#collapseOne"
       aria-expanded="true" aria-controls="collapseOne">User reviews about our site</h3> 
     </div>
       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">

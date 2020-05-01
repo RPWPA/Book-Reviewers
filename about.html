@@ -38,6 +38,13 @@
             <li class="nav-item">
                 <a class="navbar-brand" href="about.html"> About</a>
             </li>
+            <li class="nav-item">
+              <a type="button" data-toggle="modal" data-target="#loginModal" class="navbar-brand" href="#"> Login</a>
+            </li>
+  
+            <li class="nav-item">
+              <a type="button" data-toggle="modal" data-target="#registerModal" class="navbar-brand" href="#"> Register</a>
+            </li>
             <li class="nav-item active">
                 <a class="navbar-brand" href="allposts.html">
                     <button class="btn btn-primary" type="button">All Posts</button>
@@ -48,6 +55,62 @@
 
     </div>
   </nav>
+
+  <!--Login Modal-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="modal fade" id="loginModal">
+          <div class="modal-dialog modal-dialog-center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Login</h3>
+              </div>
+              <div class="modal-body">
+                <div class="alert alert-danger" id="loginError" role="alert">
+                  Please enter your data first.
+                </div>
+                <label>Username</label><input id="loginUsername" type="text" class="form-control"/>
+                <label>Password</label><input type="password" class="form-control"/>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="login()">Login</button><br>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="closeLogin()">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--Register Modal-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="modal fade" id="registerModal">
+          <div class="modal-dialog modal-dialog-center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3>Register</h3>
+              </div>
+              <div class="modal-body">
+                <div class="alert alert-danger" id="registerError" role="alert">
+                  Please enter your data first.
+                </div>
+                <label>Username</label><input type="text" class="form-control"/>
+                <label>Password</label><input type="password" class="form-control"/>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary"  onclick="register()">Register</button><br>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="closeRegister()">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- ***************************************************************************************************************************** -->
   <!--                                                       BREADCRUMB                                                -->
   <!-- ***************************************************************************************************************************** -->
@@ -126,10 +189,18 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/register.js"></script>
   <script>
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+  <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover()
     })
   </script>
 

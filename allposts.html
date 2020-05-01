@@ -130,8 +130,19 @@
 
     <!-- ***************************************************************************************************************************** -->
 
+    <div id="progressBarHolder">
+        <h5>Loading data...</h5>
+        <div class="progress" id="progBar">
+            <div class="progress-bar" id="progBar0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" id="progBar25" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">25%</div>
+            <div class="progress-bar" id="progBar50" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">50%</div>
+            <div class="progress-bar" id="progBar75" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">75%</div>
+            <div class="progress-bar" id="progBar100" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">100%</div>
+        </div>
+    </div>
+    <br>
 
-    <div class="container">
+    <div class="container" id="allPostsP1">
 
         <div class="row">
             <div class="col-lg-10 offset-1">
@@ -381,6 +392,7 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/login.js"></script>
     <script src="js/register.js"></script>
+    <script src="js/progBar.js"></script>
     <script>
         $(function () {
         $('[data-toggle="tooltip"]').tooltip()

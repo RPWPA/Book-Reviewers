@@ -12,3 +12,24 @@
 #registerError, #loginError{
     display: none;
 }
+
+#allPostsP1,#progBar25,#progBar50,#progBar75,#progBar100{
+    display: none;
+}
+
+#progBar0{
+    width: 0;
+    display: block;
+}
+#progBar25{
+    width: 25%;
+}
+#progBar50{
+    width: 50%;
+}
+#progBar75{
+    width: 75%;
+}
+#progBar100{
+    width: 100%;
+}

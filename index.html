@@ -7,9 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <script src="js/login.js"></script>
-  <script src="js/register.js"></script>
-
   <title>Book Review</title>
 
   <!-- Bootstrap core CSS -->
@@ -69,12 +66,15 @@
                 <h3>Login</h3>
               </div>
               <div class="modal-body">
-                <label>Username</label><input type="text" class="form-control"/>
+                <div class="alert alert-danger" id="loginError" role="alert">
+                  Please enter your data first.
+                </div>
+                <label>Username</label><input id="loginUsername" type="text" class="form-control"/>
                 <label>Password</label><input type="password" class="form-control"/>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary" onclick="login()">Login</button><br>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="closeLogin()">Close</button>
               </div>
             </div>
           </div>
@@ -94,12 +94,15 @@
                 <h3>Register</h3>
               </div>
               <div class="modal-body">
+                <div class="alert alert-danger" id="registerError" role="alert">
+                  Please enter your data first.
+                </div>
                 <label>Username</label><input type="text" class="form-control"/>
                 <label>Password</label><input type="password" class="form-control"/>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary"  onclick="register()">Register</button><br>
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="closeRegister()">Close</button>
               </div>
             </div>
           </div>
@@ -435,9 +438,11 @@
 
   </div>
   <!-- /.container -->
+
   <hr/><br><br>
+  
   <!-- /. site Reviews-->
-  <div id="siteReviews" class="container">
+  <div id="siteReviews" class="container" data-toggle="popover" data-placement="top" data-content="You will find our users' reviews here">
     <div class="text-center">
       <h3 class="btn-block" id="reviewsHeader" type="button" data-toggle="collapse" data-target="#collapseOne"
       aria-expanded="true" aria-controls="collapseOne">User reviews about our site</h3> 
@@ -499,12 +504,21 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/register.js"></script>
   <script>
     $(function () {
       $('[data-toggle="tooltip"]').tooltip()
     })
   </script>
+  <script>
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+  </script>
+
 
 </body>
 

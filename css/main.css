@@ -70,3 +70,6 @@ img.blur {
 .media-heading + P{
   font-weight: bold;
 }
+#registerError, #loginError{
+  display: none;
+}

@@ -17,6 +17,10 @@
     display: none;
 }
 
+#allPosts3Holder,#allPosts2Holder{
+    display: none;
+}
+
 #progBar0{
     width: 0;
     display: block;

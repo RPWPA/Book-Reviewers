@@ -1,0 +1,13 @@
+footer{
+  bottom: 0;
+  width: 100%;
+  padding-top: 40px;
+}
+#registerError, #loginError{
+  display: none;
+}
+  
+.imgSize{
+    width: 120px;
+    height: 120px;
+}
